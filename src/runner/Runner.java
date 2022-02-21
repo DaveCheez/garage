@@ -18,6 +18,8 @@ public class Runner {
 		
 		System.out.println(carOne.calculateBill(carOne.getPrice(), carOne.isUsed(), carOne.getAge()));
 		System.out.println(carOne.getAge());
+		System.out.println(carOne.getPrice());
+		System.out.println(carOne.isUsed());
 
 	}
 
