@@ -111,20 +111,25 @@ public class Vehicle {
 		this.age= age;
 		this.isUsed = isUsed;
 		double bill = 0;
-		double dv;
-		int[] ageArray = new int[age];
-		dv = (price/100) * 5;
+		int deppercent = 1;
+
 		if (isUsed == false) {
 			bill = price;
 		} else {
-			for (int i=1; i < ageArray.length; i++) {
-				bill = price - dv;
+			 for(int i=1; i<age; i++) {
+				 bill=((100-deppercent)*bill)/100;
 			}
 		}
 		
 		return bill;
 	}
-	
+//	
+//	 amount=100000;
+	 
+//	 year=3;
+//	 temp=price;
+//	 for(int i=0;i<year;i++)
+//	 bill=((100-deppercent)*temp)/100;
 
 	// Depreciation Amount = Asset Value x Annual Percentage
 
