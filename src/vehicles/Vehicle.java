@@ -110,30 +110,21 @@ public class Vehicle {
 		this.price = price;
 		this.age= age;
 		this.isUsed = isUsed;
-		double bill = 0;
-		int deppercent = 1;
+		
+		double bill = price;
+		int depreciationPercent = 5;
 
 		if (isUsed == false) {
-			bill = price;
+			return bill;
 		} else {
 			 for(int i=1; i<age; i++) {
-				 bill=((100-deppercent)*bill)/100;
+				 bill=((100-depreciationPercent)*bill)/100;
 			}
 		}
 		
 		return bill;
 	}
-//	
-//	 amount=100000;
-	 
-//	 year=3;
-//	 temp=price;
-//	 for(int i=0;i<year;i++)
-//	 bill=((100-deppercent)*temp)/100;
 
-	// Depreciation Amount = Asset Value x Annual Percentage
-
-	//Balance = Asset Value - Depreciation Value
 
 	
 	@Override
